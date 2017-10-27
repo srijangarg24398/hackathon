@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+<%= link_to "Signout",destroy_customer_session_path,method: :delete %>
+
+
+<%= link_to 'New Party', new_party_path  %>
+
+
+<h1>Listing Parties</h1>
+
+
+   
+  <div class="parties">
+ 
+    <% @parties.each do |party| %>
+
+      <div class="party">
+
+      <div class="who">
+     <strong> <%= party.customer.first_name + party.customer.last_name %> </strong>
+
+       </div>
+
+       
+
+       <div class="party_date">
+       <%= party.date %>
+        <br>
+       <strong>Food For :</strong>
+       
+       <%= party.food_amount %>
+
+
+       </div>
+
+        <div class="description">
+             <%= party.description %>
+       </div>
+
+       <div class="amount">
+        
+        </div>
+
+        <div class="party_location">
+      See You At : <%= party.location %>
+       </div>
+
+       <div class="party_links">
+
+       <% if party.customer == current_customer %>
+      
+      <div>
+      <%= button_to 'Edit', edit_party_path(party) %>
+      </div>
+      <div>
+
+      <%= button_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+    <% end %>
+
+
+</div>
+
+</div>
+
+    <% end %>
+
+</div>
+
+  
+
+
+

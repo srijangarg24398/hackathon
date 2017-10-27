@@ -1,12 +1,17 @@
 Customers world
 <% if customer_signed_in? %>
 	<%= link_to "Signout",destroy_customer_session_path,method: :delete %>
+	<%= link_to "Parties Nearby" , parties_path %>
 <% end %>
 <br><br><br>
 <h1>Restaurants Nearby</h1>
 <% @restaurants.each do |restaurant| %>
 	<h3><%= restaurant.restaurant_name %></h3><br>
 <% end %>
+
+
+
+
 <div id="hidden"></div>
 <script type="text/javascript">
 	$("button").click(function(){
