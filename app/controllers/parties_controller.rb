@@ -49,7 +49,7 @@ end
     if @party.customer == current_customer
     respond_to do |format|
       if @party.update(party_params)
-        format.html { redirect_to @party, notice: 'Party was successfully updated.' }
+        format.html { redirect_to '/parties', notice: 'Party was successfully updated.' }
         format.json { render :show, status: :ok, location: @party }
       else
         format.html { render :edit }

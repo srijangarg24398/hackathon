@@ -49,7 +49,7 @@
        <% if party.customer == current_customer %>
       
       <div>
-      <%= button_to 'Edit', edit_party_path(party) %>
+      <%= button_to 'Edit', edit_party_path(party), method: :get %>
       </div>
       <div>
 
