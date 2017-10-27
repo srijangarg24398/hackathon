@@ -1,0 +1,14 @@
+<h1>Welcome</h1>
+<% if customer_signed_in? %>
+	<%= link_to "Signout",destroy_customer_session_path,method: :delete %>
+<% end %>
+
+<br>
+<%= link_to "Customer's Side",url_for(controller: :customers,action: :index) %>
+<br>
+<%= link_to "Retailer's Side",url_for(controller: :retailers,action: :index) %>
+<br>
+<%= link_to "Manufacturer's Side",url_for(controller: :manufacturers,action: :index) %>
+<br>
+<%= link_to "Restaurant's Side",url_for(controller: :restaurants,action: :index) %>
+<br>

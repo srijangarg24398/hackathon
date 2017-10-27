@@ -1,0 +1,4 @@
+Retailers world
+<% if retailer_signed_in? %>
+	<%= link_to "Signout",destroy_retailer_session_path,method: :delete %>
+<% end %>

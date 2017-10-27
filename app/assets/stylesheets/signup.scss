@@ -1,0 +1,24 @@
+.signup{
+	width: 60%;
+	/*border:2px solid black;*/
+	h1{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	form{
+		text-align: center;
+		label{
+			font-size: 12px;
+		}
+		input[type=text],input[type=password],input[type=email]{
+			border-radius: 25px;
+		}
+		.user_name{
+			display:flex;
+			input[type=text]{
+				width:95%;
+			}
+		}
+	}
+}

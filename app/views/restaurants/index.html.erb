@@ -1,0 +1,22 @@
+restaurants world
+<% if restaurant_signed_in? %>
+	<%= link_to "Signout",destroy_restaurant_session_path,method: :delete %>
+<% end %>
+
+<div id="push-notification">Push a surplus notification</div>
+
+<script>
+	$("div#push-notification").click(function(){
+		console.log("clicked");
+	$.ajax({
+		url:'/post-notification',
+		type:'POST',
+		datatype:'text',
+		data:{message: "text",restaurant:current_restaurant.id},
+		success:function(){
+			console.log("Success");
+		}
+	})
+	}
+	)
+</script>

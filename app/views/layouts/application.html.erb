@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tryol</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="https://use.fontawesome.com/68872fb2de.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if notice %>
+<script type="text/javascript">
+	noty({text:"<%= notice %>",type:'alert'});
+</script>
+<% end %>
+<% if alert %>
+<script type="text/javascript">
+	noty({text:"<%= alert %>",type:'error'});
+</script>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

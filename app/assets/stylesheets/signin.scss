@@ -1,0 +1,41 @@
+.signin{
+	width: 60%;
+	h1{
+		text-align: center;
+		font-size: 60px;
+		display: flex;
+		justify-content: center;
+	}
+	.profile-img
+	{
+	    
+	    width: 96px;
+	    height: 96px;
+	    margin: 0 auto 10px;
+	    display: block;
+	    -moz-border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    border-radius: 50%;
+	}
+	form{
+		background-color: #fff;
+		text-align: center;
+		label{
+			font-size: 12px;
+		}
+		input[type=text],input[type=password],input[type=email]{
+			border-radius: 25px;
+		}
+		.user_name{
+			display:flex;
+			input[type=text]{
+				width:95%;
+			}
+		}
+		input[type=submit]{
+			width: 60%;
+			border-radius: 15px;
+
+		}
+	}
+}
