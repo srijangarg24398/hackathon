@@ -47181,3 +47181,1840 @@ ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.cs
   Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (47.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateParties (20171027220741)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "parties" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "date" datetime, "description" text, "food_amount" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_parties_on_customer_id" ON "parties" ("customer_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171027220741"]]
+  [1m[36m (163.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_customers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_customers_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_manufacturers_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_manufacturers_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_manufacturers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_manufacturers_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_parties_on_customer_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_parties_on_customer_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_residues_on_restaurant_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_residues_on_restaurant_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_restaurants_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_restaurants_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_restaurants_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_restaurants_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_retailers_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_retailers_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_retailers_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_retailers_on_email' AND type='index'
+
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 03:51:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (137.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 03:51:58 +0530
+Processing by HomeController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/customers/index
+Completed 302 Found in 23ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 03:51:58 +0530
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.2ms)[0m  SELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 1426ms (Views: 1417.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/bootstrap.min.css.map" for 127.0.0.1 at 2017-10-28 03:52:00 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (39.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (27.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.8ms)
+
+
+Started GET "/residues" for 127.0.0.1 at 2017-10-28 03:53:27 +0530
+Processing by ResiduesController#index as HTML
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mResidue Load (0.2ms)[0m  SELECT "residues".* FROM "residues"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered residues/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/residues/1" for 127.0.0.1 at 2017-10-28 03:53:46 +0530
+Processing by ResiduesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResidue Load (0.2ms)[0m  SELECT  "residues".* FROM "residues" WHERE "residues"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered residues/show.html.erb within layouts/application (1.9ms)
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:53:52 +0530
+Processing by RestaurantsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/sign_in" for 127.0.0.1 at 2017-10-28 03:53:52 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered restaurants/shared/_links.html.erb (4.1ms)
+  Rendered restaurants/sessions/new.html.erb within layouts/application (34.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 97ms (Views: 94.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 03:53:57 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.9ms)
+
+
+Started DELETE "/customers/sign_out" for 127.0.0.1 at 2017-10-28 03:53:58 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wp2jsu/dmmew+Gp1kIrNM5y1XifBKSyUI3nfRpofrETneTA5s/V1UYhW0UXJbE4LVAdiiP7Wb6p77u2yTeeCow=="}
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 03:53:58 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css.map" for 127.0.0.1 at 2017-10-28 03:53:58 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.7ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:54:01 +0530
+Processing by RestaurantsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/sign_in" for 127.0.0.1 at 2017-10-28 03:54:01 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered restaurants/shared/_links.html.erb (0.9ms)
+  Rendered restaurants/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 03:54:40 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.2ms)
+
+
+Started POST "/restaurants/sign_in" for 127.0.0.1 at 2017-10-28 03:54:40 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z60DnpLwVkYohMbVHvs+ZJ5qeE0CNqAYw+ik78WGPX1uWMy8T6aLnnsYe2KL/nmEnGawdjrDKI2u8xMR8JhBUw==", "restaurant"=>{"email"=>"a@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["email", "a@b.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "restaurants" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["last_sign_in_at", "2017-10-27 20:44:35.079341"], ["current_sign_in_at", "2017-10-27 22:24:40.485498"], ["sign_in_count", 11], ["updated_at", "2017-10-27 22:24:40.486449"], ["id", 1]]
+  [1m[35m (90.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/restaurants/index
+Completed 302 Found in 389ms (ActiveRecord: 91.0ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:54:40 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  [1m[36mResidue Load (0.2ms)[0m  [1mSELECT "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  Rendered restaurants/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.css.map" for 127.0.0.1 at 2017-10-28 03:54:40 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (43.5ms)
+
+
+Started GET "/residues/new" for 127.0.0.1 at 2017-10-28 03:54:51 +0530
+Processing by ResiduesController#new as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered residues/_form.html.erb (32.3ms)
+  Rendered residues/new.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 137ms (Views: 134.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:54:57 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  [1m[36mResidue Load (0.1ms)[0m  [1mSELECT "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  Rendered restaurants/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/residues/1/edit" for 127.0.0.1 at 2017-10-28 03:55:00 +0530
+Processing by ResiduesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mResidue Load (0.1ms)[0m  SELECT  "residues".* FROM "residues" WHERE "residues"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered residues/_form.html.erb (1.7ms)
+  Rendered residues/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/residues" for 127.0.0.1 at 2017-10-28 03:55:03 +0530
+Processing by ResiduesController#index as HTML
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered residues/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/residues/new" for 127.0.0.1 at 2017-10-28 03:55:05 +0530
+Processing by ResiduesController#new as HTML
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered residues/_form.html.erb (1.7ms)
+  Rendered residues/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:55:07 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  Rendered restaurants/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/residues/1" for 127.0.0.1 at 2017-10-28 03:55:18 +0530
+Processing by ResiduesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResidue Load (0.1ms)[0m  [1mSELECT  "residues".* FROM "residues" WHERE "residues"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered residues/show.html.erb within layouts/application (1.8ms)
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:55:20 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  Rendered restaurants/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/residues/new" for 127.0.0.1 at 2017-10-28 03:56:05 +0530
+Processing by ResiduesController#new as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered residues/_form.html.erb (2.5ms)
+  Rendered residues/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:56:07 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  Rendered restaurants/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/residues/new" for 127.0.0.1 at 2017-10-28 03:56:14 +0530
+Processing by ResiduesController#new as HTML
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered residues/_form.html.erb (2.7ms)
+  Rendered residues/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 03:56:15 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  Rendered restaurants/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 03:56:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.5ms)
+
+
+Started DELETE "/restaurants/sign_out" for 127.0.0.1 at 2017-10-28 03:56:20 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ke6xC2aL05Zkns8NcaYh6e9fDZbS0BwhNcm1De54yHQAfesRopElre5z9YOoVm2JHRt/XboolrKSEy0BqnHAEw=="}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ?  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 03:56:20 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css.map" for 127.0.0.1 at 2017-10-28 03:56:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (51.0ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 03:56:22 +0530
+Processing by CustomersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 127.0.0.1 at 2017-10-28 03:56:22 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered customers/shared/_links.html.erb (1.6ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 03:56:28 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.5ms)
+
+
+Started POST "/customers/sign_in" for 127.0.0.1 at 2017-10-28 03:56:28 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RCKSri/llvxFlt7uquMvQg7DrS/cYnX7WDmcmZbGlxuWMG1p83WXZhIYsX4lQxOfM+YdIFcHEUNumN07i4AZVQ==", "customer"=>{"email"=>"a@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."email" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["email", "a@b.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "customers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "customers"."id" = ?  [["last_sign_in_at", "2017-10-27 20:46:41.669069"], ["current_sign_in_at", "2017-10-27 22:26:28.794318"], ["sign_in_count", 14], ["updated_at", "2017-10-27 22:26:28.795577"], ["id", 1]]
+  [1m[36m (105.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/customers/index
+Completed 302 Found in 310ms (ActiveRecord: 106.3ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 03:56:28 +0530
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  [1m[36mResidue Load (0.1ms)[0m  [1mSELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1[0m  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.css.map" for 127.0.0.1 at 2017-10-28 03:56:29 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (19.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (113.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.8ms)
+
+
+Started DELETE "/customers/sign_out" for 127.0.0.1 at 2017-10-28 04:03:29 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kahhZW+fgBkgdT3sF7Hig/RQp44xWjBkJpXNuqvDT3L1yVSGBMwAWaItIMAHNDeajkN6gFq/RdWWUdh9I2MNtQ=="}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 04:03:29 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:03:31 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (55.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.1ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:06:05 +0530
+Processing by CustomersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 127.0.0.1 at 2017-10-28 04:06:05 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered customers/shared/_links.html.erb (0.3ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 127.0.0.1 at 2017-10-28 04:06:14 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0DvUeFKU674QZC9r7YkhOQz936nJiPFlcKyScb+qhiX9ZBcEO3uN4T9kwfyaO2RFcqY+Exj3MQpjbSSs2mDZQ==", "customer"=>{"email"=>"a@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["email", "a@b.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "customers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["last_sign_in_at", "2017-10-27 22:26:28.794318"], ["current_sign_in_at", "2017-10-27 22:36:15.069165"], ["sign_in_count", 15], ["updated_at", "2017-10-27 22:36:15.070073"], ["id", 1]]
+  [1m[35m (92.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/customers/index
+Completed 302 Found in 287ms (ActiveRecord: 92.9ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:06:15 +0530
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:06:17 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (39.7ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:11:35 +0530
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 76ms (Views: 52.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:11:38 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.8ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:14:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  [1m[36mResidue Load (0.2ms)[0m  [1mSELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1[0m  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 428ms (Views: 377.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/parties" for 127.0.0.1 at 2017-10-28 04:14:54 +0530
+Processing by PartiesController#index as HTML
+  [1m[35mParty Load (15.2ms)[0m  SELECT "parties".* FROM "parties"
+  Rendered parties/index.html.erb within layouts/application (17.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 51ms (Views: 32.4ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:14:56 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.3ms)
+
+
+Started GET "/parties" for 127.0.0.1 at 2017-10-28 04:15:17 +0530
+Processing by PartiesController#index as HTML
+  [1m[35mParty Load (0.2ms)[0m  SELECT "parties".* FROM "parties"
+  Rendered parties/index.html.erb within layouts/application (2.8ms)
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:15:19 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (41.2ms)
+
+
+Started GET "/parties/new" for 127.0.0.1 at 2017-10-28 04:15:22 +0530
+Processing by PartiesController#new as HTML
+  Rendered parties/_form.html.erb (47.5ms)
+  Rendered parties/new.html.erb within layouts/application (110.4ms)
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 240ms (Views: 220.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/parties/new" for 127.0.0.1 at 2017-10-28 04:24:14 +0530
+Processing by PartiesController#new as HTML
+  Rendered parties/_form.html.erb (12.5ms)
+  Rendered parties/new.html.erb within layouts/application (13.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 580ms (Views: 578.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/party.self-e47d8f353431779103403c41f763af6a05f4ed4b4633d5c76dab84534a775743.css?body=1" for 127.0.0.1 at 2017-10-28 04:24:15 +0530
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:24:18 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.4ms)
+
+
+Started GET "/parties" for 127.0.0.1 at 2017-10-28 04:24:21 +0530
+Processing by PartiesController#index as HTML
+  [1m[35mParty Load (0.2ms)[0m  SELECT "parties".* FROM "parties"
+  Rendered parties/index.html.erb within layouts/application (1.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:24:22 +0530
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (0.2ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?  [["restaurant_id", 1]]
+  [1m[36mResidue Load (0.2ms)[0m  [1mSELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1[0m  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parties" for 127.0.0.1 at 2017-10-28 04:24:24 +0530
+Processing by PartiesController#index as HTML
+  [1m[35mParty Load (0.2ms)[0m  SELECT "parties".* FROM "parties"
+  Rendered parties/index.html.erb within layouts/application (1.2ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/customers/sign_out" for 127.0.0.1 at 2017-10-28 04:24:29 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GP21kocxi57EqB4UuRnDdrrRTfGDSrPMNg1QZYzYI5E2sGUquNGYkB7uNH/iroqr8HeeAxrWkzhUvqK9/3sNOQ=="}
+  [1m[35mCustomer Load (0.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-28 04:24:29 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:24:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.7ms)
+
+
+Started GET "/restaurants/index" for 127.0.0.1 at 2017-10-28 04:24:32 +0530
+Processing by RestaurantsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/sign_in" for 127.0.0.1 at 2017-10-28 04:24:32 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered restaurants/shared/_links.html.erb (1.5ms)
+  Rendered restaurants/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:24:37 +0530
+Processing by CustomersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 127.0.0.1 at 2017-10-28 04:24:37 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered customers/shared/_links.html.erb (1.3ms)
+  Rendered customers/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 127.0.0.1 at 2017-10-28 04:24:50 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bJMsp4090pzsfbkujSvXS1YfzLywgDHsBEutNqV9tTR1k617MhlnnNdME5MQCdt9wvPLzaKuK42+ZIAzREKY8Q==", "customer"=>{"email"=>"a@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["email", "a@b.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "customers" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "customers"."id" = ?[0m  [["last_sign_in_at", "2017-10-27 22:36:15.069165"], ["current_sign_in_at", "2017-10-27 22:54:51.080758"], ["sign_in_count", 16], ["updated_at", "2017-10-27 22:54:51.081777"], ["id", 1]]
+  [1m[35m (103.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/customers/index
+Completed 302 Found in 311ms (ActiveRecord: 104.5ms)
+
+
+Started GET "/customers/index" for 127.0.0.1 at 2017-10-28 04:24:51 +0530
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "residues" WHERE "residues"."restaurant_id" = ?[0m  [["restaurant_id", 1]]
+  [1m[35mResidue Load (0.1ms)[0m  SELECT  "residues".* FROM "residues" WHERE "residues"."restaurant_id" = ?  ORDER BY "residues"."id" ASC LIMIT 1  [["restaurant_id", 1]]
+  Rendered customers/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/serviceworker.js" for 127.0.0.1 at 2017-10-28 04:24:53 +0530
+
+ActionController::RoutingError (No route matches [GET] "/serviceworker.js"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:22:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:15:in `call'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:86:in `block in pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `catch'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:84:in `pre_process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:53:in `process'
+  /usr/lib/ruby/vendor_ruby/thin/connection.rb:39:in `receive_data'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run_machine'
+  /usr/lib/ruby/vendor_ruby/eventmachine.rb:187:in `run'
+  /usr/lib/ruby/vendor_ruby/thin/backends/base.rb:73:in `start'
+  /usr/lib/ruby/vendor_ruby/thin/server.rb:162:in `start'
+  /usr/lib/ruby/vendor_ruby/rack/handler/thin.rb:19:in `run'
+  rack (1.6.8) lib/rack/server.rb:287:in `start'
+  railties (4.2.8) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.8) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.8) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:9:in `require'
+  bin/rails:9:in `<top (required)>'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+  spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+  spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+  spring (2.0.2) lib/spring/client.rb:30:in `run'
+  spring (2.0.2) bin/spring:49:in `<top (required)>'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+  spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  /usr/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:68:in `require'
+  bin/spring:15:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.0ms)
+
+
+Started GET "/residues" for 127.0.0.1 at 2017-10-28 04:24:53 +0530
+Processing by ResiduesController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ?  ORDER BY "customers"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mResidue Load (0.2ms)[0m  SELECT "residues".* FROM "residues"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered residues/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 56ms (Views: 44.5ms | ActiveRecord: 0.6ms)

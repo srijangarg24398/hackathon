@@ -1,6 +1,7 @@
 Customers world
-
-<br><br><br>
+<br><br>
+<h1><%= link_to "Parties Nearby" , parties_path %></h1>
+<br>
 <h1><%= link_to "Restaurants Nearby",residues_path %></h1>
 <% @restaurants.each do |restaurant| %>
 	<h3><%= restaurant.restaurant_name %></h3> 

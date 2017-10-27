@@ -1,0 +1,89 @@
+<div class="partyform">
+<%= form_for(@party) do |f| %>
+  <% if @party.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@party.errors.count, "error") %> prohibited this party from being saved:</h2>
+
+      <ul>
+      <% @party.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :food_amount %><br>
+    <%= f.text_field :food_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+     <div class="transpoter-content">
+        <div id="map"></div>
+    </div>
+
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+<script>
+    function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 18
+        });
+
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+              
+
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map
+                });
+
+                map.setCenter(pos);
+
+
+                   var cityCircle = new google.maps.Circle({
+            strokeColor: '#FF000F',
+            strokeOpacity: 1,
+            strokeWeight: 2,
+            fillColor: '#FF000F',
+            fillOpacity: 0.35,
+            map: map,
+            center: pos,
+            radius: 80
+          });
+
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAce8RU-Z6Yp3dqUf0gf8Blm7sAWtpAwR4&callback=initMap"
+        async defer></script>

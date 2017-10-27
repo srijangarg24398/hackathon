@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  date: 2017-10-28 03:37:41
+  description: MyText
+  food_amount: MyString
+  location: MyString
+
+two:
+  customer_id: 
+  date: 2017-10-28 03:37:41
+  description: MyText
+  food_amount: MyString
+  location: MyString
