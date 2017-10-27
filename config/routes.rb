@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :residues
   devise_for :restaurants, controllers: {
         registrations: 'restaurants/registrations',
       }

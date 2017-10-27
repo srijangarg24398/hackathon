@@ -1,13 +1,18 @@
 Customers world
 
 <br><br><br>
-<h1>Restaurants Nearby</h1>
+<h1><%= link_to "Restaurants Nearby",residues_path %></h1>
 <% @restaurants.each do |restaurant| %>
-	<h3><%= restaurant.restaurant_name %></h3><br>
+	<h3><%= restaurant.restaurant_name %></h3> 
+	<% if restaurant.residues.count>0 %> Offering upto 
+	<h5><%= restaurant.residues.first.discount %>&nbsp;% Discount</h5>
+	<br>
+	<% end %>
 <% end %>
+	<div id="map"></div>
 <div id="hidden"></div>
 <script type="text/javascript">
-	$("button").click(function(){
+	$("#hidden").click(function(){
 	if (!Notification) {
     		alert('Hello World!'); 
     		return;
@@ -22,3 +27,54 @@ Customers world
 		});
 });
 </script>
+
+<script>
+    function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 18
+        });
+
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+              
+
+                var marker = new google.maps.Marker({
+                    position: pos,
+                    map: map
+                });
+
+                map.setCenter(pos);
+
+
+                   var cityCircle = new google.maps.Circle({
+            strokeColor: '#FF000F',
+            strokeOpacity: 1,
+            strokeWeight: 2,
+            fillColor: '#FF000F',
+            fillOpacity: 0.35,
+            map: map,
+            center: pos,
+            radius: 80
+          });
+
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAce8RU-Z6Yp3dqUf0gf8Blm7sAWtpAwR4&callback=initMap"
+        async defer></script>

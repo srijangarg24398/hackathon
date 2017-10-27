@@ -1,0 +1,31 @@
+<%= form_for(@residue) do |f| %>
+  <% if @residue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@residue.errors.count, "error") %> prohibited this residue from being saved:</h2>
+
+      <ul>
+      <% @residue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% if params[:action]=='new'&& params[:residues]=='users' %>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :discount_upto %><br>
+    <%= f.text_field :discount %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,18 +1,29 @@
 <h1>Restaurant's Column</h1>
-
-<div id="push-notification">Push a surplus notification</div>
-
-<script>
-	$("div#push-notification").click(function(){
-		console.log("clicked");
-	// $.ajax({
-	// 	url:'/post-notification',
-	// 	type:'POST',
-	// 	datatype:'text',
-	// 	data:{message: "text",restaurant:current_restaurant.id},
-	// 	success:function(){
-	// 		console.log("Success");
-	// 	}
-	// })
-	});
-</script>
+<%= link_to "Create a leftover notification",new_residue_path %>
+<% if current_restaurant.residues.count==0 %>
+	<h2>No pending residues</h2>
+<% else %>
+	<h2>Our pending residues</h2>
+<% end %>
+<div class="parties">
+<% current_restaurant.residues.each do |residue| %>
+  <div class="party">
+    <div class="party_date">
+      <%= residue.date %>
+    </div>
+    <div class="description">
+      <%= residue.description %>
+    </div>
+    <div class="party_location">
+      Discounts upto : <%= residue.discount %> &nbsp;%
+    </div>
+    <div class="party_links">
+      <%= link_to 'Show', residue %>
+      <% if restaurant_signed_in? %>
+      <%= link_to 'Edit', edit_residue_path(residue) %>
+      <%= link_to 'Destroy', residue, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+</div>
