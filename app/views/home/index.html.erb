@@ -1,14 +1,21 @@
-<h1>Welcome</h1>
+<h1 align="center" style="font-size: 50px;">Welcome</h1><br><br>
+<div style="display: flex;justify-content: center;">
 <% if customer_signed_in? %>
 	<%= link_to "Signout",destroy_customer_session_path,method: :delete %>
 <% end %>
 
-<br>
+<br><h1><center>
 <%= link_to "Customer's Side",url_for(controller: :customers,action: :index) %>
+<br>
 <br>
 <%= link_to "Retailer's Side",url_for(controller: :retailers,action: :index) %>
 <br>
+<br>
 <%= link_to "Manufacturer's Side",url_for(controller: :manufacturers,action: :index) %>
+<br>
 <br>
 <%= link_to "Restaurant's Side",url_for(controller: :restaurants,action: :index) %>
 <br>
+</center>
+</h1>
+</div>
